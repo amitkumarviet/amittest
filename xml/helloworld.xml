@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="AmitPhotoGallery" height="350"  author_email ="amit.lathi@gmail.com" screenshot="" thumbnail="" author_location ="India" author_affiliation ="" title_url=""  directory_title="" />
+  <ModulePrefs title="AmitPhotoGallery" height="300"  author_email ="amit.lathi@gmail.com" screenshot="" thumbnail="" author_location ="India" author_affiliation ="" title_url=""  directory_title="" />
   <Content type="html">
   <![CDATA[
   <div id="zombiecontainer"
