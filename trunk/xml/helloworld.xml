@@ -47,7 +47,7 @@
   </script>
   <br />
   <div style="text-align: center;">
-    <input type=submit value="Next ->" onClick="browse()"> Made by Amit Lathi
+    <input type=submit value="Next ->" onClick="browse()">
   </div>
   ]]>
   </Content>
