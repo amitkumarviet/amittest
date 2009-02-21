@@ -47,6 +47,8 @@
   </script>
   <br />
   <div style="text-align: center;">
+	<b>Amit Lathi</b>
+	<img src="http://amittest.googlecode.com/svn/trunk/xml/ATT00004.jpg" > 
     <input type=submit value="Next ->" onClick="browse()">
   </div>
   ]]>
