@@ -4,7 +4,7 @@
   <Content type="html">
   <![CDATA[
   <div id="zombiecontainer"
-    style="text-align:center;"><img src="http://amittest.googlecode.com/svn/trunk/ATT00004.jpg" >
+    style="text-align:center;">
   </div>
   <script type="text/javascript">
   var counter = 0;
@@ -47,7 +47,7 @@
   </script>
   <br />
   <div style="text-align: center;">
-    <input type=submit value="Next ->" onClick="browse()">
+    <input type=submit value="Next ->" onClick="browse()"> Made by Amit Lathi
   </div>
   ]]>
   </Content>
