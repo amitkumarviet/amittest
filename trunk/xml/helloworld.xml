@@ -4,7 +4,7 @@
   <Content type="html">
   <![CDATA[
   <div id="zombiecontainer"
-    style="text-align:center;">
+    style="text-align:center;"><img src="http://gadget-doc-examples.googlecode.com/svn/trunk/zombie-0.jpg">
   </div>
   <script type="text/javascript">
   var counter = 0;
