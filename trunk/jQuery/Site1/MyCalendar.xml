@@ -23,11 +23,12 @@
 			  $('input').daterangepicker(); 
 		 });
 	</script>
-   
+  
+	<div style="text-align: center;">
+	
 		<b>Select meeting with Amit Lathi</b>
-		<input type="text" value="Choose a Date" id="rangeA" />
-
-	 
+		<input type="text" value="Choose a Date" id="rangeA" style="height:20px"  />
+	</div>
   
   ]]>
   </Content>
