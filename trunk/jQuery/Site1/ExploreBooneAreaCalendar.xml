@@ -24,25 +24,25 @@
 		body { font-size: 62.5%; }
 		input {width: 196px; height: 1.1em; display:block;}
 	</style>
+  
+		<b>Welcome __UP_myname__ </b>
+		<br>
+		<div id="content_div" style="font-size:20pt; padding:5px; text-align: center;">
+			<div id="datepicker" /></div>
+		</div>
 
-	<script type="text/javascript">	
+		<script type="text/javascript">	
 		var prefs = new gadgets.Prefs();
 
 		var element = document.getElementById('content_div');
 		element.style.backgroundColor=prefs.getString("mycolor");
 		element.style.height=100;
-
-
+		
 		$(function(){
 			  $("#datepicker").datepicker();
 		 });
+		 
 	</script>
-  
-	<b>Welcome __UP_myname__ </b>
-	<br>
-	<div id="content_div" style="font-size:20pt; padding:5px; text-align: center;">
-		<div id="datepicker" /></div>
-	</div>
   
   ]]>
   </Content>
