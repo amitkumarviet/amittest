@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="ExploreBooneArea.com v0.1" height="300" width="300"  author_email ="amit.lathi@gmail.com" screenshot="" thumbnail="" author_location ="India" author_affiliation ="" title_url=""  directory_title="" />
+  <Content type="html">
+  <![CDATA[
+
+	<script type="text/javascript" src="http://amittest.googlecode.com/svn/trunk/jQuery/Site1/js/jquery-1.3.1.min.js"></script>
+	<script type="text/javascript" src="http://amittest.googlecode.com/svn/trunk/jQuery/Site1/js/jquery-ui-personalized-1.6rc6.min.js"></script>
+	<script type="text/javascript" src="http://amittest.googlecode.com/svn/trunk/jQuery/Site1/js/daterangepicker.jQuery.js"></script>
+
+	<link type="text/css" href="http://amittest.googlecode.com/svn/trunk/jQuery/Site1/css/ui.core.css" rel="Stylesheet" />
+	<link rel="stylesheet" href="http://amittest.googlecode.com/svn/trunk/jQuery/Site1/css/themes/ui.theme.css" type="text/css" title="ui-theme" />
+	<link rel="stylesheet" href="http://amittest.googlecode.com/svn/trunk/jQuery/Site1/css/ui.datepicker.css" type="text/css" />
+	<link rel="stylesheet" href="http://amittest.googlecode.com/svn/trunk/jQuery/Site1/css/ui.daterangepicker.css" type="text/css" />
+		
+	<style type="text/css">
+		body { font-size: 62.5%; }
+		input {width: 196px; height: 1.1em; display:block;}
+	</style>
+
+	<script type="text/javascript">	
+		$(function(){
+			  $("#datepicker").datepicker();
+		 });
+	</script>
+  
+	<table cellpadding="0px" cellspacing="0px">
+		<tr>		
+			<td>
+				<div id="datepicker" /></div>
+			</td>
+		</tr>
+	</table>
+  
+  ]]>
+  </Content>
+</Module>
