@@ -25,6 +25,11 @@
 	</script>
   
 	<table cellpadding="0px" cellspacing="0px">
+		<tr>		
+			<td>
+				Meeting with Amit Lathi
+			</td>
+		</tr>		
 		<tr>
 			<td>
 				<input type="text" value="Choose a Date" id="rangeA" style="height:20px"  />	
