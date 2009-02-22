@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="Amit's Calendar" height="400"  author_email ="amit.lathi@gmail.com" screenshot="" thumbnail="" author_location ="India" author_affiliation ="" title_url=""  directory_title="" />
+  <ModulePrefs title="Amit's Calendar" height="500" width="600"  author_email ="amit.lathi@gmail.com" screenshot="" thumbnail="" author_location ="India" author_affiliation ="" title_url=""  directory_title="" />
   <Content type="html">
   <![CDATA[
 
@@ -24,10 +24,12 @@
 		 });
 	</script>
   
-  <div style="text-align: center;">
-	<b>Select meeting with Amit Lathi</b>
-	<input type="text" value="Choose a Date" id="rangeA" />		
-  </div>
+	<div style="text-align: center;">
+	
+		<b>Select meeting with Amit Lathi</b>
+		<input type="text" value="Choose a Date" id="rangeA" />
+
+	</div>
   
   ]]>
   </Content>
