@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="ExploreBooneArea.com v0.1" height="300" width="300"  author_email ="amit.lathi@gmail.com" screenshot="" thumbnail="" author_location ="India" author_affiliation ="" title_url=""  directory_title="" />
+	<ModulePrefs title="ExploreBooneArea.com v0.1" height="300" width="300"  author_email ="amit.lathi@gmail.com" screenshot="" thumbnail="" author_location ="India" author_affiliation ="" title_url=""  directory_title="" />
+	<UserPref name="myname" display_name="Name" required="true" />
+	<UserPref name="mycolor" display_name="Color" default_value="Pink"  datatype="enum" >
+		<EnumValue value="Blue" />
+		<EnumValue value="Yellow" />
+		<EnumValue value="Pink" />
+		<EnumValue value="Gray" />
+	</UserPref>
   <Content type="html">
   <![CDATA[
 
@@ -19,15 +26,25 @@
 	</style>
 
 	<script type="text/javascript">	
+		var prefs = new gadgets.Prefs();
+
+		var element = document.getElementById('content_div');
+		element.style.backgroundColor=prefs.getString("mycolor");
+		element.style.height=100;
+
+
 		$(function(){
 			  $("#datepicker").datepicker();
 		 });
 	</script>
   
+	<b>Welcome __UP_myname__ </b>
 	<table cellpadding="0px" cellspacing="0px">
 		<tr>		
 			<td>
-				<div id="datepicker" /></div>
+				<div id="content_div" style="font-size:20pt; padding:5px; text-align: center;">
+					<div id="datepicker" /></div>
+				</div>
 			</td>
 		</tr>
 	</table>
