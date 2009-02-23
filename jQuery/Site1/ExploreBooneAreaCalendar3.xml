@@ -18,7 +18,7 @@
 		input {width: 196px; height: 1.1em; display:block;}
 	</style>
   
-	<div style="align:center">
+	<div style="text-align:center">
 		<br>
 		<div id="datepicker" /></div>
 	</div>
