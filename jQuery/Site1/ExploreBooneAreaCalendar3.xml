@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-	<ModulePrefs title="ExploreBooneArea.com v0.1" height="300" width="300" author_email ="amit.lathi@gmail.com" screenshot="" thumbnail="" author_location ="India" author_affiliation ="" title_url=""  directory_title="" scaling="false" />
+	<ModulePrefs title="ExploreBooneArea.com v0.1" height="400" width="400" author_email ="amit.lathi@gmail.com" screenshot="" thumbnail="" author_location ="India" author_affiliation ="" title_url=""  directory_title="" scaling="false" />
   <Content type="html">
   <![CDATA[
 
@@ -15,10 +15,9 @@
 		
 	<style type="text/css">
 		body { font-size: 62.5%; }
-		input {width: 196px; height: 1.1em; display:block;}
 	</style>
   
-	<div style="text-align:center">
+	<div style="text-align:center;width:400px">
 		<br>
 		<div id="datepicker" />
 	</div>
