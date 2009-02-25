@@ -12,10 +12,24 @@
 		body { font-size: 57.5%; }
 	</style>
   
-	<div style="text-align:center;width:400px">
-		<br />
-		<div id="datepicker" /> 
-	</div>
+	        <table cellpadding="0px" cellspacing="0px">
+            <tr>		
+	            <td>
+	            <br />
+		            <div id="datepicker" /> 
+	            </td>
+            </tr>
+            <tr>
+	            <td>
+		            <iframe src="http://google.com" width=300 height=200></iframe>
+	            </td>
+            </tr>
+            <tr>
+	            <td>
+		            <a href="#" >Add</a>
+	            </td>
+            </tr>
+        </table>
 
 	<script type="text/javascript">	
 		
