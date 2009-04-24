@@ -161,7 +161,10 @@ function InitialLoadEvent()
     //alert(startdate);
     
     //var url = "Events.aspx?CategoryId=" + category + "&VenueId=" + venue  ;
-    var url = "http://amit.cccom.com/gadget2/gadget2/events.aspx?CategoryId=" + category + "&VenueId=" + venue  ;
+    //var url = "http://amit.cccom.com/gadget2/gadget2/events.aspx?CategoryId=" + category + "&VenueId=" + venue  ;
+    var url = "http://amittest.googlecode.com/svn/trunk/Gadget2/Gadget2/Events.aspx?CategoryId=" + category + "&VenueId=" + venue  ;
+    
+    
     
     loadXMLDoc(url);
     return false;
@@ -175,7 +178,9 @@ function LoadEvent(objstartdate)
     var venue=0;
     var category=0;
     
-    var url = "http://amit.cccom.com/gadget2/gadget2/events.aspx?StartDate=" + startdate + "&EndDate=" + enddate + "&CategoryId=" + category + "&VenueId=" + venue  ;
+    //var url = "http://amit.cccom.com/gadget2/gadget2/events.aspx?StartDate=" + startdate + "&EndDate=" + enddate + "&CategoryId=" + category + "&VenueId=" + venue  ;
+    var url = "http://amittest.googlecode.com/svn/trunk/Gadget2/Gadget2/Events.aspx?StartDate=" + startdate + "&EndDate=" + enddate + "&CategoryId=" + category + "&VenueId=" + venue  ;
+    
     loadXMLDoc(url);
     return false;
 }
