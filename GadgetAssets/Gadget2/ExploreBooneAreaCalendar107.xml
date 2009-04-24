@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+	<ModulePrefs title="ExploreBooneArea.com v0.6" height="700" width="800" author_email ="amitlathi@gmail.com" screenshot="" thumbnail="" author_location ="India" author_affiliation ="" title_url=""  directory_title="" scaling="false" >
+		<Require feature="views" />
+		<Require feature="setprefs" />
+    <Require feature="dynamic-height"/>
+  </ModulePrefs>
+	<UserPref name="isSlideShow" display_name="Auto Slideshow?" datatype="bool" default_value="true" />
+	<UserPref name="setSlideShow" display_name="Slideshow Activation (in secs)" datatype="string" default_value="10" required="true"/>
+	<UserPref name="userID" default_value="0" datatype="hidden"/>
+	<Content type="html" view="home">
+		<![CDATA[
+ 
+    
+    <link type="text/css" href="http://amittest.googlecode.com/svn/trunk/GadgetAssets/css/Gadget/StyleSheet.css" rel="Stylesheet" />
+    <link type="text/css" href="http://amittest.googlecode.com/svn/trunk/GadgetAssets/css/ui.all.css" rel="Stylesheet" />	
+    <script type="text/javascript" src="http://amittest.googlecode.com/svn/trunk/GadgetAssets/js/jquery-1.3.1.js"></script>
+    <script type="text/javascript" src="http://amittest.googlecode.com/svn/trunk/GadgetAssets/js/jquery-ui-personalized-1.6rc6.js"></script>
+    <script type="text/javascript" src="http://amittest.googlecode.com/svn/trunk/GadgetAssets/js/Gadget/Gadget.js"></script>
+    <script type="text/javascript" src="http://amittest.googlecode.com/svn/trunk/GadgetAssets/js/flashobject.js"></script>
+    
+  
+		<table width="100%" cellpadding="0" cellspacing="0" border="0" >
+			<tr>
+				<td align="center">
+					    <table id="mainArea" width="100%" cellpadding="0" cellspacing="0" border="0" >
+                  <tr><td align="left"><a href="http://exploreboonearea.com" target="_blank" style="border:0px" ><img id="imgLogo" src="http://amittest.googlecode.com/svn/trunk/GadgetAssets/images/BOO-1001-Logo4c.jpg" alt="ExploreBooneArea.com" style="border:0px;" /></a></td></tr>
+                  <tr>
+                      <td align="center" valign="top" style="height:220px" id="tabsArea">
+                          <div id="tabs" >
+	                          <ul >
+		                          <li><a href="#tabs-1" onclick="ResetSlideShow(); ShowHome();"><font size="1px">Calender</font></a></li>
+		                          <li><a href="#tabs-2" onclick="ResetSlideShow(); ShowCanvas(); gotoCanvas(); return false;"><font size="1px">Calender Search</font></a></li>
+		                          <li><a href="#tabs-3" onclick="ShowSlideShow(); ShowHome();"><font size="1px">Slide-Show</font></a></li>
+      		                    
+	                          </ul>
+	                          <div id="tabs-1" >
+                                  <table border="0" cellpadding="0" cellspacing="0">
+                                      <tr>
+                                          <td align="center" valign="middle" style="height:180px" onmouseover="chkSlideShow();">
+                                              <div class="calDiv" ><div id="datepicker"  /></div>
+                                          </td>
+                                      </tr>
+                                  </table>
+	                          </div>
+	                          <div id="tabs-2">Loading...</div>
+	                          <div id="tabs-3">
+	                              <table style="height:180px" border="0" cellpadding="0" cellspacing="0">
+	                                  <tr>
+	                                      <td align="center" valign="middle">
+                                              <table id="objFlashMovieArea" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                  <tr>
+                                                      <td align="center">
+
+                                                         <div id="divFlash" name="divFlash" ></div>
+                                                            <script type="text/javascript" language="javascript">
+
+                                                                loadObjects();
+
+                                                            </script>
+
+                                                      </td>
+                                                  </tr>
+                                              </table>
+	                                      </td>
+	                                  </tr>
+	                              </table>
+	                          </div>
+                          </div>
+                      </td>
+                  </tr>
+              </table>
+              <div id="EventSection">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" >
+                      <tr onmouseover="chkSlideShow();">
+                          <td align="Left" style="height:300px;" >
+                              <div id="EventScroll" style="border:1px ; overflow: auto; height: 300px;" >
+                                  <div id="events" style="margin:5px"></div>
+                              </div>
+                          </td>
+                      </tr>
+                  </table>
+                  
+                  <script language="javascript" type="text/javascript">
+                      InitialLoadEvent();
+                  </script>
+              </div>
+				</td>
+			</tr>
+			<tr><td height="8px"></td></tr>
+			<tr>
+				<td>
+					<div style="width:100%; text-align:left; font-size:11px"><a onclick="gotoCanvas(); return false;" href="#" >&nbsp;Add</a></div> 
+				</td>
+			</tr>
+		</table>
+		
+	<script type="text/javascript">	
+		
+		function navigateTo(dest) {
+			var supported_views = gadgets.views.getSupportedViews();
+			gadgets.views.requestNavigateTo(supported_views[dest]);
+		  };
+
+		  /**
+		   * When called, this method asks the container to switch to the canvas
+		   */
+		  function gotoCanvas() {
+			navigateTo("canvas");
+		  };
+		  
+		   // Get user preferences
+			var prefs = new _IG_Prefs();
+			
+			var isSlideShow;
+			var setSlideShow;
+			
+			isSlideShow = prefs.getBool("isSlideShow");
+			setSlideShow = prefs.getString("setSlideShow");
+	
+      /*
+			var iFrameHome = document.getElementById("iFrameHome");
+			iFrameHome.setAttribute("src","http://amit.cccom.com/gadget2/gadget2/home.aspx?isSlideShow=" + isSlideShow + "&setSlideShow=" + setSlideShow);
+		  
+
+    function resizeGadget()
+    {
+              var dimensions = {width: 0, height: 0};
+              if (document.documentElement) 
+              {
+                  dimensions.width = document.documentElement.offsetWidth;
+                  dimensions.height = document.documentElement.offsetHeight;
+              }
+              else if (window.innerWidth && window.innerHeight) 
+              {
+                  dimensions.width = window.innerWidth;
+                  dimensions.height = window.innerHeight;
+              }
+
+              fWidth = 250;
+              fHeight = 140;
+              Ratio = 1;
+
+              Ratio =  dimensions.width / 270;
+
+              //alert(dimensions.width + ' ' + dimensions.height);
+
+              fWidth = 250 * Ratio;
+              fHeight = 140 * Ratio;
+
+              fWidth = Math.round(fWidth);
+              fHeight = Math.round(fHeight);
+
+//                if (fWidth > 250)
+//                {
+//                    fWidth = 250;
+//                    fHeight = 140;
+//                }
+
+              if (fWidth < 50)
+              {
+                  fWidth = 50;
+                  fHeight = 28;
+              }
+
+              //LogoWidth = fWidth;
+              LogoHeight = (154/550) * fWidth;
+              LogoHeight = Math.round(LogoHeight);
+              
+//                if (LogoWidth < 180)
+//                    LogoWidth=180;
+              
+              //alert(fHeight*2+350);
+              
+            var iFrameHome = document.getElementById("iFrameHome");
+            iFrameHome.setAttribute("height", String(fHeight+LogoHeight+350));
+    }
+
+
+    var secs=0;
+    var initialsecs=2; // Set the initial delay
+    var timerID = null;
+    var timerRunning = true;
+    var delay = 500;
+
+    function InitializeTimer()
+    {
+        secs = initialsecs;
+        StartTheTimer();
+    }
+
+    function StopTheClock()
+    {
+        if (timerRunning)
+        {
+            clearTimeout(timerID);
+            timerRunning = false;
+        }
+    }
+
+    function StartTheTimer()
+    {
+        if (secs == 0)
+        {
+            secs = 1; //-OR- timerRunning=false;
+            resizeGadget(); //call the function when time expires
+        }
+        //self.status = secs;
+        secs = secs - 1;
+        if (timerRunning)
+        {
+            timerID = self.setTimeout("StartTheTimer()", delay);
+        }
+    }
+
+    InitializeTimer();
+    //gadgets.window.adjustHeight();
+    */
+    
+    
+</script>
+  
+  ]]>
+	</Content>
+
+	<Content type="html" view="canvas">
+		<![CDATA[
+
+	
+	<div style="width:100%; text-align:left; font-size:11px"><a onclick="gotoHome(); return false;" href="#" >&nbsp;Home</a></div>    
+	<br />
+    <table width="100%" cellpadding="0px" cellspacing="0px" align="left" border="0px"   >
+        <tr>
+            <td align="left">
+                <iframe id="iFrameSearch" width="700" height="700" frameborder="0" marginheight="0" marginwidth="0"  style="border-collapse:collapse;" scrolling="no" ></iframe>
+            </td>
+        </tr>
+    </table>
+	
+	<script type="text/javascript" src="http://amit.cccom.com/Gadget2/js/jquery-1.3.1.js"></script>
+
+	<script type="text/javascript">	
+
+		function navigateTo(dest) {
+			var supported_views = gadgets.views.getSupportedViews();
+			gadgets.views.requestNavigateTo(supported_views[dest]);
+		  };
+
+
+		  /**
+		   * When called, this method asks the container to switch to the home
+		   */
+		function gotoHome() {
+			navigateTo("home");
+		  };
+
+
+		/*
+		Generate fragment of random numbers
+		*/
+		jQuery._uuid_default_prefix = '';
+		jQuery._uuidlet = function () {
+			return(((1+Math.random())*0x10000)|0).toString(16).substring(1);
+		};
+		/*
+		Generates random uuid
+		*/
+		jQuery.uuid = function (p) {
+			if (typeof(p) == 'object' && typeof(p.prefix) == 'string') {
+				jQuery._uuid_default_prefix = p.prefix;
+			} else {
+				p = p || jQuery._uuid_default_prefix || '';
+				return(p+jQuery._uuidlet()+jQuery._uuidlet()+"-"+jQuery._uuidlet()+"-"+jQuery._uuidlet()+"-"+jQuery._uuidlet()+"-"+jQuery._uuidlet()+jQuery._uuidlet()+jQuery._uuidlet());
+			};
+		};
+
+
+		  // Get user preferences
+			var prefs = new _IG_Prefs();
+			
+			var ID = prefs.getString("userID");
+			var objGUID = "0";
+			if (ID == "0")
+			{
+				objGUID = jQuery.uuid();
+				prefs.set("userID", objGUID);
+				//alert('New' + objGUID);
+			}
+			else
+			{
+				objGUID = prefs.getString("userID");
+				//alert('Old' + objGUID);
+			}
+			
+			var isSlideShow;
+			var setSlideShow;
+			
+			isSlideShow = prefs.getBool("isSlideShow");
+			setSlideShow = prefs.getString("setSlideShow");
+			
+			var iFrameSearch = document.getElementById("iFrameSearch");
+			//iFrameSearch.setAttribute("src","http://amit.cccom.com/gadget2/gadget2/EventSearch.aspx?uid='" + String(objGUID) + "'&isSlideShow=" + isSlideShow + "&setSlideShow=" + setSlideShow);
+			
+			iFrameSearch.setAttribute("src","http://dev.exploreboonearea.com/portals/0/public/categoryJSON_sample.aspx?uid='" + String(objGUID) + "'&isSlideShow=" + isSlideShow + "&setSlideShow=" + setSlideShow);
+		
+      //gadgets.window.adjustHeight();
+
+	</script>
+	
+  ]]>
+	</Content>
+</Module>
