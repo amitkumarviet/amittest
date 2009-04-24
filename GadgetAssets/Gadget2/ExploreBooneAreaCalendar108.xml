@@ -98,17 +98,7 @@
 	<script type="text/javascript">	
 		
     
- function makeGETRequest(url) {
-   var params = {};
-   params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;
-   gadgets.io.makeRequest(url, response, params); 
-};
-function response(obj) {
-   alert(obj.text); 
-};
-makeGETRequest("http://example.com"); 
-makeGETRequest("http://amittest.googlecode.com/svn/trunk/Gadget2/Gadget2/Events.aspx?CategoryId=0&VenueId=0"); 
-makeGETRequest("http://amit.cccom.com/gadget2/gadget2/events.aspx?CategoryId=0&VenueId=0"); 
+
 
 		function navigateTo(dest) {
 			var supported_views = gadgets.views.getSupportedViews();
