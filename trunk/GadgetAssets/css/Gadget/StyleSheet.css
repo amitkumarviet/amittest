@@ -1,0 +1,78 @@
+﻿body 
+{ 	
+	font-family: Arial;	
+	font-size:11px;
+	padding:0px;
+	margin:0px;
+}
+
+.calDiv
+{
+	font-family: Arial;
+	font-size:xx-small;
+	text-decoration:none;
+	margin:0px;
+	padding:0px;
+}
+
+A
+{
+	text-decoration:none;
+}
+
+.Header
+{
+	font-family: Arial;
+	font-size:8px;
+	font-weight:bold;
+}
+
+.hrBar
+{
+	height:1px;
+	color:#5C9CCC;
+	border-collapse:collapse;
+	margin:0px;
+	padding:0px;
+}
+
+
+.normalText
+{
+	font-family: Arial;
+	font-size:11px;
+	text-decoration:none;
+}
+
+.headerText
+{
+	font-family: Arial;
+	font-size:11px;
+	font-weight:bold;
+}
+
+.showClass
+{
+	display:block;
+}
+
+.hideClass
+{
+	display:none;
+}
+
+.scroll {
+    height: 300px;
+    width: 98%;
+    overflow: auto;
+    border: 1px solid #5C9CCC;
+    padding: 5px;
+    text-align:left;
+}
+
+.hasEvents_day
+{
+	background-color: Black;
+	/*BACKGROUND: url(../../images/calendar.gif);*/
+	/*BACKGROUND: url(../images/calendar.gif) #eee no-repeat center 50%; COLOR: Green! important*/
+}

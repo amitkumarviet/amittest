@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+	<ModulePrefs title="ExploreBooneArea.com v0.2" height="800" width="800" author_email ="amit.lathi@gmail.com" screenshot="" thumbnail="" author_location ="India" author_affiliation ="" title_url=""  directory_title="" scaling="false" >
+		<Require feature="views" />
+	</ModulePrefs>
+	<Content type="html" view="home">
+		<![CDATA[
+
+		<table width="100%" cellpadding="0" cellspacing="0" border="0" >
+			<tr>
+				<td align="center">
+					<iframe src="http://amit.cccom.com/gadget2/gadget2/home.aspx" width="100%" height="425px" frameborder="0" marginheight="0" marginwidth="0"  style="border-collapse:collapse;"  ></iframe>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<br />
+					<div style="width:100%; text-align:left; font-size:11px"><a onclick="gotoCanvas(); return false;" href="#" >&nbsp;Add</a></div> 
+				</td>
+			</tr>
+		</table>
+		
+	<script type="text/javascript">	
+		
+		function navigateTo(dest) {
+			var supported_views = gadgets.views.getSupportedViews();
+			gadgets.views.requestNavigateTo(supported_views[dest]);
+		  };
+
+		  /**
+		   * When called, this method asks the container to switch to the canvas
+		   */
+		  function gotoCanvas() {
+			navigateTo("canvas");
+		  };
+		 
+	</script>
+  
+  ]]>
+	</Content>
+
+	<Content type="html" view="canvas">
+		<![CDATA[
+
+	<div style="width:100%; text-align:left; font-size:11px"><a onclick="gotoHome(); return false;" href="#" >&nbsp;Home</a></div>    
+	<br />
+    <table width="100%" cellpadding="0px" cellspacing="0px" align="left" border="0px"   >
+        <tr>
+            <td align="left">
+                <iframe src="http://amit.cccom.com/Gadget2/gadget2/EventSearch.aspx" width="700" height="700" frameborder="0" marginheight="0" marginwidth="0"  style="border-collapse:collapse;"  ></iframe>
+            </td>
+        </tr>
+    </table>
+
+	<script type="text/javascript">	
+		
+		function navigateTo(dest) {
+			var supported_views = gadgets.views.getSupportedViews();
+			gadgets.views.requestNavigateTo(supported_views[dest]);
+		  };
+
+
+		  /**
+		   * When called, this method asks the container to switch to the home
+		   */
+		function gotoHome() {
+			navigateTo("home");
+		  };
+
+	</script>
+	
+  ]]>
+	</Content>
+</Module>

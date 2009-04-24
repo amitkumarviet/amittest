@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetEventsByDateRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModuleID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventsByDateRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEventsByDateRangeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventsByDateRangeCategoryWise">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModuleID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="CategoryId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventsByDateRangeCategoryWiseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEventsByDateRangeCategoryWiseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventsByDateRangeVenueWise">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModuleID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="VenueId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventsByDateRangeVenueWiseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEventsByDateRangeVenueWiseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventsByDateRangeCategoryVenueWise">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModuleID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="VenueId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CategoryId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventsByDateRangeCategoryVenueWiseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEventsByDateRangeCategoryVenueWiseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetEventsByDateRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEventsByDateRange" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsByDateRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEventsByDateRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsByDateRangeCategoryWiseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEventsByDateRangeCategoryWise" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsByDateRangeCategoryWiseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEventsByDateRangeCategoryWiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsByDateRangeVenueWiseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEventsByDateRangeVenueWise" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsByDateRangeVenueWiseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEventsByDateRangeVenueWiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsByDateRangeCategoryVenueWiseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEventsByDateRangeCategoryVenueWise" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsByDateRangeCategoryVenueWiseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEventsByDateRangeCategoryVenueWiseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EventMgmtSoap">
+    <wsdl:operation name="GetEventsByDateRange">
+      <wsdl:input message="tns:GetEventsByDateRangeSoapIn" />
+      <wsdl:output message="tns:GetEventsByDateRangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsByDateRangeCategoryWise">
+      <wsdl:input message="tns:GetEventsByDateRangeCategoryWiseSoapIn" />
+      <wsdl:output message="tns:GetEventsByDateRangeCategoryWiseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsByDateRangeVenueWise">
+      <wsdl:input message="tns:GetEventsByDateRangeVenueWiseSoapIn" />
+      <wsdl:output message="tns:GetEventsByDateRangeVenueWiseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsByDateRangeCategoryVenueWise">
+      <wsdl:input message="tns:GetEventsByDateRangeCategoryVenueWiseSoapIn" />
+      <wsdl:output message="tns:GetEventsByDateRangeCategoryVenueWiseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EventMgmtSoap" type="tns:EventMgmtSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEventsByDateRange">
+      <soap:operation soapAction="http://tempuri.org/GetEventsByDateRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsByDateRangeCategoryWise">
+      <soap:operation soapAction="http://tempuri.org/GetEventsByDateRangeCategoryWise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsByDateRangeVenueWise">
+      <soap:operation soapAction="http://tempuri.org/GetEventsByDateRangeVenueWise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsByDateRangeCategoryVenueWise">
+      <soap:operation soapAction="http://tempuri.org/GetEventsByDateRangeCategoryVenueWise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EventMgmtSoap12" type="tns:EventMgmtSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEventsByDateRange">
+      <soap12:operation soapAction="http://tempuri.org/GetEventsByDateRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsByDateRangeCategoryWise">
+      <soap12:operation soapAction="http://tempuri.org/GetEventsByDateRangeCategoryWise" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsByDateRangeVenueWise">
+      <soap12:operation soapAction="http://tempuri.org/GetEventsByDateRangeVenueWise" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsByDateRangeCategoryVenueWise">
+      <soap12:operation soapAction="http://tempuri.org/GetEventsByDateRangeCategoryVenueWise" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EventMgmt">
+    <wsdl:port name="EventMgmtSoap" binding="tns:EventMgmtSoap">
+      <soap:address location="http://dev.exploreboonearea.com/EventMgmt.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EventMgmtSoap12" binding="tns:EventMgmtSoap12">
+      <soap12:address location="http://dev.exploreboonearea.com/EventMgmt.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
